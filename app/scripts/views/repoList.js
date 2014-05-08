@@ -20,9 +20,9 @@ ReponderousBb.Views = ReponderousBb.Views || {};
         events: {},
 
         initialize: function () {
-            //this.collection.bind('replace reset add remove', this.render, this);
+            this.collection.bind('replace reset add remove', this.render, this);
             this.render();
-            console.log('init', this.collection);
+            console.log('init', this.collection, this);
         },
 
         render: function () {

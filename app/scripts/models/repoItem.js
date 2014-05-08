@@ -10,6 +10,7 @@ ReponderousBb.Models = ReponderousBb.Models || {};
         url: '',
 
         initialize: function() {
+            console.log('this.model', this);
         },
 
         defaults: {
@@ -23,7 +24,7 @@ ReponderousBb.Models = ReponderousBb.Models || {};
 
         parse: function(response, options)  {
             console.log('parse', response);
-            return response;
+            return {id: response.id, title: response.name};
         }
     });
 
